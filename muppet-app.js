@@ -2,15 +2,16 @@
 (function(){
   'use strict';
 
-  
+
 
   // Model class for each Muppet item
   var MuppetModel = Backbone.Model.extend({
+    idAttribute: "_id",
+
     defaults: {
       id: null,
       name: null,
       occupation: null,
-      idAttribute: "_id"
     }
   });
 
