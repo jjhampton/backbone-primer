@@ -15,15 +15,40 @@
   </head>
   <body>
 
+    <div id="muppets-app">
+
+      <ul class="muppets-list"></ul>
+
+      <div class="muppet-create">
+        <b>Add a Muppet</b>
+        <label>Name: <input id="muppet-name" type="text"></label>
+        <label>Job: <input id="muppet-job" type="text"></label>
+        <button class="create">Create Muppet!</button>
+      </div>
+
+    </div>
+
+    <script type="text/template" id="muppet-item-tmpl">
+      <p><a href="/muppets/<%= _id %>"><%= name %></a></p>
+      <p>Job: <i><%= occupation %></i></p>
+      <button class="remove">x</button>
+    </script>
+
+
+
   <!-- Third Party Scripts -->
   <script src="bower_components/commonjs-require/commonjs-require.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone-min.js">
+
+  </script>
   <script src="bower_components/handlebars/handlebars.js"></script>
 
   <!-- Application Scripts -->
   <script src="dist/scripts/templates.js"></script>
   <script src="dist/scripts/app.js"></script>
+  <script src="muppet-app.js"></script>
   <script>
     require('main');
   </script>
