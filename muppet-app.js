@@ -2,9 +2,7 @@
 (function(){
   'use strict';
 
-  $(document).ready(function(){
-    Backbone.history.start();
-  });
+  
 
   // Model class for each Muppet item
   var MuppetModel = Backbone.Model.extend({
